@@ -10,9 +10,9 @@ function App() {
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(new Date().getMonth());
 
-  const handleYearDoubleClick = () => {
-    const newYear = prompt('Enter a new year:');
-    if (newYear && !isNaN(newYear)) {
+  const handleYearChange = (event) => {
+    const newYear = event.target.value;
+    if (!isNaN(newYear)) {
       setYear(parseInt(newYear));
     }
   };
@@ -66,7 +66,12 @@ function App() {
             <option key={index} value={index}>{month}</option>
           ))}
         </select>
-        <span onDoubleClick={handleYearDoubleClick}>{year}</span>
+        <input 
+          type="text"
+          value={year}
+          onChange={handleYearChange}
+          placeholder="Year"
+        />
         <button onClick={handleNextMonth}>Next</button>
       </div>
       <table className="calendar">
