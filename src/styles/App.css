@@ -1,12 +1,38 @@
-h1 {
-    color: #27aedb;
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
     text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
+  }
+  
+  .controls {
+    display: flex;
     align-items: center;
-}
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .controls select, .controls span {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .calendar {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th, .calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .error {
+    color: red;
+  }
+  
